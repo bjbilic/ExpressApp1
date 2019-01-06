@@ -27,7 +27,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
+// REST API
 app.use('/api', (req, res, next) => {
+    res.json({ "result": "success" });
     res.json({ "result": "success" });
 });
 
